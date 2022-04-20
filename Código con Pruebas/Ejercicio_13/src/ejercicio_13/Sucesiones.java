@@ -13,31 +13,33 @@ package ejercicio_13;
     public class Sucesiones
     {
         //  Metodo que mostrara en pantalla los "n" terminos
-        public void Fibonacci (int posicion)
+        public String Fibonacci (int posicion)
         {
             int Operando1, Operando2, acumulador;
             Operando1= 0;
             Operando2= 1;
             acumulador= 0;
+            String cadena="";
             
             if (posicion>0)
             {
-                if (posicion==1) System.out.print(Operando1);
-                if (posicion==2) System.out.print(Operando1 + "," + Operando2);
+                if (posicion==1) cadena = "" + Operando1;
+                if (posicion==2) cadena = Operando1 + "," Operando2;
                 if ((posicion!=1)&(posicion!=2))
                 {
-                    System.out.print(Operando1 + "," + Operando2);
+                	cadena = Operando1 + "," Operando2;
                 }
                 
                 while(posicion>2)
                 {
                     acumulador = Operando1 + Operando2;
-                    System.out.print("," + acumulador);
+                    cadena = cadena + "," acumulador;
                     Operando1= Operando2;
                     Operando2= acumulador;
                     posicion= posicion - 1;
                 }
             }
+            return cadena;
         }
     }
 
