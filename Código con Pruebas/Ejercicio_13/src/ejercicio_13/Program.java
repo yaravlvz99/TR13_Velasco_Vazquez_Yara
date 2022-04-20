@@ -17,7 +17,7 @@ public class Program
         Sucesiones objfibo= new Sucesiones();
         System.out.print("Introduzca un valor: ");
         termino = Teclado.entero();
-        objfibo.Fibonacci(termino);
+        System.out.println(objfibo.Fibonacci(termino));
         
     }
 }
